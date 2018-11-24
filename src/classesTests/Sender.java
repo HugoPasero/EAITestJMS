@@ -73,7 +73,7 @@ public class Sender {
 
             // start the connection, to enable message sends
             connection.start();
-            while(true){
+            //while(true){
                 for (int i = 0; i < count; i++) {
                     ObjectMessage message = session.createObjectMessage();
                     message.setObject(p1);
@@ -86,7 +86,7 @@ public class Sender {
                     System.out.println("Sent: " + message.getObject());
                 }
                 Thread.sleep(1000);
-            }
+          //  }
             
         } catch (JMSException exception) {
             exception.printStackTrace();
