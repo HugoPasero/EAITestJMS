@@ -49,8 +49,8 @@ public class Sender {
         PreConvention p1 = new PreConvention(1L, new DateConvention("01/06/2018"), new DateConvention("31/08/2018"), 1200.0F, "Chargé d'affaire", "Sharepoint", "ENEDIS GRDF", "François Guiraud", "ERDF1234", e1);
         PreConvention p2 = new PreConvention(2L, new DateConvention("01/06/2018"), new DateConvention("31/08/2018"), 1100.0F, "Développeur", "Web", "Banque populaire", "M. Jean-Claude", "BP1234", e2);
         PreConvention p3 = new PreConvention(3L, new DateConvention("01/06/2016"), new DateConvention("31/08/2018"), 1150.0F, "Assistance MOA", "Tuleap", "Orange", "Aurélie", "O1234", e3);
-        
 
+        
         try {
             // create the JNDI initial context.
             context = new InitialContext();
@@ -80,10 +80,10 @@ public class Sender {
                     sender.send(message);
                     
                     System.out.println("Sent: " + message.getObject() );
-                    message = session.createObjectMessage();
+                   /* message = session.createObjectMessage();
                     message.setObject(p2);
                     sender.send(message);
-                    System.out.println("Sent: " + message.getObject());
+                    System.out.println("Sent: " + message.getObject());*/
                 }
                 Thread.sleep(1000);
           //  }
