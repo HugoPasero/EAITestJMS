@@ -77,12 +77,17 @@ public class Sender {
                     ObjectMessage message = session.createObjectMessage();
                     message.setObject(p1);
                     sender.send(message);
-                    
                     System.out.println("Sent: " + message.getObject() );
-                   /* message = session.createObjectMessage();
+                    
+                    message = session.createObjectMessage();
                     message.setObject(p2);
                     sender.send(message);
-                    System.out.println("Sent: " + message.getObject());*/
+                    System.out.println("Sent: " + message.getObject() );
+                    
+                    message = session.createObjectMessage();
+                    message.setObject(p3);
+                    sender.send(message);
+                    System.out.println("Sent: " + message.getObject() );
                 //}
                 Thread.sleep(1000);
             }

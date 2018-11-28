@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package classesTests;
 
 import donnes.preconvention.PreConvention;
@@ -33,7 +28,7 @@ public class Receiver {
         ConnectionFactory factory = null;
         Connection connection = null;
         String factoryName = "jms/__defaultConnectionFactory";
-        String destName = "ConventionEnCours";
+        String destName = "ConventionEnCours2";
         Destination dest = null;
         int count = 100;
         Session session = null;
