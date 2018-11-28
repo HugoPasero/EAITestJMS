@@ -35,13 +35,12 @@ public class Sender {
         ConnectionFactory factory = null;
         Connection connection = null;
         String factoryName = "jms/__defaultConnectionFactory";
-        String destName = "ConventionEnCours";
+        String destName = "PreConvention";
         Destination dest = null;
         int count = 1;
         Session session = null;
         MessageProducer sender = null;
-        /*TitreBoursier goog = new TitreBoursier("GOOG", "Google inc", 1194.64F, 14.15F);
-        TitreBoursier aapl = new TitreBoursier("AAPL", "Apple inc", 224.95F, 4.53F);*/
+
         Diplome d = new Diplome(1L, Diplome.Niveau.M2, "MIAGE");
         Etudiant e1 = new Etudiant(1L, "Murillo--Cantié", "Emma", "MAIF", "maif1", d);
         Etudiant e2 = new Etudiant(2L, "Pasero", "Hugo", "MAIF", "maif2", d);
@@ -73,8 +72,8 @@ public class Sender {
 
             // start the connection, to enable message sends
             connection.start();
-            //while(true){
-                for (int i = 0; i < count; i++) {
+            while(true){
+                //for (int i = 0; i < count; i++) {
                     ObjectMessage message = session.createObjectMessage();
                     message.setObject(p1);
                     sender.send(message);
@@ -84,9 +83,9 @@ public class Sender {
                     message.setObject(p2);
                     sender.send(message);
                     System.out.println("Sent: " + message.getObject());*/
-                }
+                //}
                 Thread.sleep(1000);
-          //  }
+            }
             
         } catch (JMSException exception) {
             exception.printStackTrace();
