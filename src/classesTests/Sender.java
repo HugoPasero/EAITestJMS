@@ -41,7 +41,7 @@ public class Sender {
         Session session = null;
         MessageProducer sender = null;
 
-        Diplome d = new Diplome(1L, Diplome.Niveau.M2, "MIAGE");
+        Diplome d = new Diplome("1", Diplome.Niveau.M2, "MIAGE");
         Etudiant e1 = new Etudiant(1L, "Murillo--Cantié", "Emma", "MAIF", "maif1", d);
         Etudiant e2 = new Etudiant(2L, "Pasero", "Hugo", "MAIF", "maif2", d);
         Etudiant e3 = new Etudiant(3L, "Roca", "Marie", "MAAF", "maaf1", d);

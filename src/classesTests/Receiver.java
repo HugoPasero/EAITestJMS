@@ -68,7 +68,7 @@ public class Receiver {
                         PreConvention convention = (PreConvention) preconvention;
                         
                         //Remplacer ci-dessous et afficher dans l'interface graphique
-                        System.out.println("Received: " + convention + " " + message.getStringProperty("date"));
+                        System.out.println("Received: " + convention);
                     }
 
                 } else if (message != null) {
